@@ -15,14 +15,7 @@ const SiteFooter = () => {
             </Text>
           </Box>
 
-          <Flex direction="column" gap={2}>
-            <Text textTransform="uppercase" letterSpacing="wider" fontSize="sm" color="whiteAlpha.700">
-              Find us
-            </Text>
-            <Link href="mailto:hello@askhank.ai" color="accent.200">
-              hello@askhank.ai
-            </Link>
-          </Flex>
+          
 
           <Flex direction="column" gap={2}>
             <Text textTransform="uppercase" letterSpacing="wider" fontSize="sm" color="whiteAlpha.700">
