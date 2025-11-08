@@ -188,7 +188,7 @@ const AskHankLanding = () => {
                   fontWeight="bold"
                   _hover={{ bg: "neutral.100", transform: "translateY(-2px)" }}
                 >
-                  Enter the Q&amp;A portal
+                  Visit AskHank.ai
                 </Button>
               </HStack>
             </VStack>
@@ -212,7 +212,37 @@ const AskHankLanding = () => {
             </Box>
           </Stack>
 
-  
+          <Box
+            mt={{ base: 10, lg: 12 }}
+            bgGradient="linear(to-r, brand.700, brand.500)"
+            color="white"
+            p={{ base: 6, md: 10 }}
+            borderRadius="3xl"
+            textAlign="center"
+            boxShadow="2xl"
+            w="100%"
+          >
+            <Heading size="lg" mb={{ base: 3, md: 4 }}>
+              {`Subscribe to the ${BRAND_TITLE} Newsletter`}
+            </Heading>
+            <Text fontSize={{ base: "md", md: "lg" }} maxW="3xl" mx="auto" mb={{ base: 6, md: 8 }}>
+              Weekly prompts from Henry Svec on navigating the emotional and financial layers of
+              complex money conversations, sent straight to your inbox.
+            </Text>
+            <Button
+              as={Link}
+              href="https://www.askhankyourmoneycoach.ca/subscribe"
+              isExternal
+              size="lg"
+              colorScheme="whiteAlpha"
+              color="brand.800"
+              bg="white"
+              _hover={{ bg: "neutral.100" }}
+            >
+              Join the newsletter
+            </Button>
+          </Box>
+
         </Container>
       </Box>
 
@@ -467,50 +497,6 @@ const AskHankLanding = () => {
             </VStack>
           ))}
         </SimpleGrid>
-
-        <Box
-          mt={{ base: 16, md: 24 }}
-          bgGradient="linear(to-r, brand.700, brand.500)"
-          color="white"
-          p={{ base: 8, md: 12 }}
-          borderRadius="3xl"
-          textAlign="center"
-          boxShadow="2xl"
-        >
-          <Heading size="lg" mb={4}>
-            Money confidence starts with one honest conversation.
-          </Heading>
-          <Text fontSize="lg" maxW="3xl" mx="auto" mb={8}>
-            {`${BRAND_TITLE} decodes the financial, emotional, and relational layers of your next big
-            decision—and helps you move forward knowing an expert has your back.`}
-          </Text>
-          <HStack justify="center" spacing={4} wrap="wrap">
-            <Button
-              as={Link}
-              href="https://askhank.ai"
-              isExternal
-              size="lg"
-              colorScheme="whiteAlpha"
-              color="brand.800"
-              bg="white"
-              _hover={{ bg: "neutral.100" }}
-            >
-              Start a question
-            </Button>
-            <Button
-              as={Link}
-              href="https://www.askhankyourmoneycoach.ca/subscribe"
-              isExternal
-              size="lg"
-              variant="outline"
-              borderColor="whiteAlpha.700"
-              color="white"
-              _hover={{ bg: "whiteAlpha.200" }}
-            >
-              {`Subscribe to the ${BRAND_TITLE} Newsletter`}
-            </Button>
-          </HStack>
-        </Box>
       </Container>
     </Box>
   );
