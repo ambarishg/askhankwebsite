@@ -19,6 +19,7 @@ import { CheckCircleIcon } from "@chakra-ui/icons";
 import {
   FiClock,
   FiCompass,
+  FiHeadphones,
   FiLock,
   FiMessageCircle,
   FiTrendingUp,
@@ -43,7 +44,12 @@ const differentiators = [
   },
 ];
 
-const proofPoints = [
+const proofPoints = [];
+
+const podcastHighlights = [
+  "Weekly prompts to navigate family, founder, and wealth decisions with calm.",
+  "Short, high-signal episodes distilled from real coaching sessions.",
+  "Actionable scripts and reframes you can bring into your next money talk.",
 ];
 
 const focusAreas = [
@@ -160,7 +166,78 @@ const AskHankLanding = () => {
       </Box>
 
       <Container maxW="container.xl" py={{ base: 12, md: 16 }}>
-        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={6}>
+        <Stack
+          direction={{ base: "column", md: "row" }}
+          spacing={{ base: 8, md: 10 }}
+          align="stretch"
+          bgGradient="linear(to-r, brand.900, brand.700)"
+          color="white"
+          p={{ base: 8, md: 10 }}
+          borderRadius="3xl"
+          borderWidth={1}
+          borderColor="brand.500"
+          boxShadow="2xl"
+        >
+          <VStack flex={1} align="flex-start" spacing={5}>
+            <Tag
+              size="lg"
+              px={4}
+              py={2}
+              bg="whiteAlpha.200"
+              color="white"
+              fontWeight="semibold"
+              borderRadius="full"
+            >
+              Podcast spotlight
+            </Tag>
+            <Heading size="lg" lineHeight="short">
+              Tune into the Ask Your Money Coach podcast.
+            </Heading>
+            <Text fontSize="lg" color="whiteAlpha.900">
+              Join Henry Svec each week for candid breakdowns of the financial and relational knots
+              listeners submit before stepping into their own conversations.
+            </Text>
+            <Button
+              as={Link}
+              href="https://open.spotify.com/show/3Btgj6qaZYBJyCUHY2yu3G"
+              isExternal
+              size="lg"
+              colorScheme="whiteAlpha"
+              color="brand.900"
+              bg="white"
+              _hover={{ bg: "neutral.100" }}
+              fontWeight="bold"
+            >
+              Listen on Spotify
+            </Button>
+          </VStack>
+          <VStack
+            flex={1}
+            align="stretch"
+            spacing={4}
+            bg="whiteAlpha.200"
+            borderRadius="2xl"
+            p={{ base: 6, md: 8 }}
+          >
+            <HStack spacing={3}>
+              <Icon as={FiHeadphones} boxSize={8} color="white" />
+              <Box>
+                <Text fontSize="sm" textTransform="uppercase" letterSpacing="widest" color="whiteAlpha.700">
+                  What you’ll hear
+                </Text>
+                <Heading size="md">Coaching in your earbuds</Heading>
+              </Box>
+            </HStack>
+            {podcastHighlights.map((item) => (
+              <HStack key={item} align="start" spacing={3}>
+                <Icon as={CheckCircleIcon} color="accent.300" mt={1} />
+                <Text color="whiteAlpha.900">{item}</Text>
+              </HStack>
+            ))}
+          </VStack>
+        </Stack>
+
+        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={6} mt={{ base: 12, md: 16 }}>
           {differentiators.map((item) => (
             <VStack
               key={item.title}
