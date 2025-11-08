@@ -121,8 +121,8 @@ const heroImage =
   "https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1600&q=80";
 
 const AskHankLanding = () => {
-  const cardBg = useColorModeValue("white", "neutral.800");
-  const subtleBg = useColorModeValue("neutral.100", "neutral.700");
+  const cardBg = useColorModeValue("surfaceElevated", "neutral.800");
+  const subtleBg = useColorModeValue("surfaceSubtle", "neutral.700");
 
   return (
     <Box as="main" position="relative">
@@ -161,8 +161,8 @@ const AskHankLanding = () => {
               <Tag
                 alignSelf="flex-start"
                 size="lg"
-                bg="whiteAlpha.200"
-                color="white"
+                bg="whiteAlpha.900"
+                color="brand.700"
                 fontWeight="semibold"
                 px={4}
                 py={2}
@@ -182,11 +182,11 @@ const AskHankLanding = () => {
                   href="https://askhank.ai"
                   isExternal
                   size="lg"
-                  colorScheme="whiteAlpha"
-                  color="brand.900"
-                  bg="white"
+                  colorScheme="accent"
+                  bg="action"
+                  color="onAction"
                   fontWeight="bold"
-                  _hover={{ bg: "neutral.100", transform: "translateY(-2px)" }}
+                  _hover={{ bg: "accent.600", transform: "translateY(-2px)" }}
                 >
                   Visit AskHank.ai
                 </Button>
@@ -237,7 +237,7 @@ const AskHankLanding = () => {
               colorScheme="whiteAlpha"
               color="brand.800"
               bg="white"
-              _hover={{ bg: "neutral.100" }}
+              _hover={{ bg: "surfaceSubtle" }}
             >
               Join the newsletter
             </Button>
@@ -264,8 +264,8 @@ const AskHankLanding = () => {
               size="lg"
               px={4}
               py={2}
-              bg="whiteAlpha.200"
-              color="white"
+              bg="white"
+              color="brand.700"
               fontWeight="semibold"
               borderRadius="full"
             >
@@ -286,7 +286,7 @@ const AskHankLanding = () => {
               colorScheme="whiteAlpha"
               color="brand.900"
               bg="white"
-              _hover={{ bg: "neutral.100" }}
+              _hover={{ bg: "surfaceSubtle" }}
               fontWeight="bold"
             >
               Listen on Spotify
@@ -296,14 +296,16 @@ const AskHankLanding = () => {
             flex={1}
             align="stretch"
             spacing={4}
-            bg="whiteAlpha.200"
+            bg="blackAlpha.400"
             borderRadius="2xl"
+            borderWidth={1}
+            borderColor="whiteAlpha.400"
             p={{ base: 6, md: 8 }}
           >
             <HStack spacing={3}>
               <Icon as={FiHeadphones} boxSize={8} color="white" />
               <Box>
-                <Text fontSize="sm" textTransform="uppercase" letterSpacing="widest" color="whiteAlpha.700">
+                <Text fontSize="sm" textTransform="uppercase" letterSpacing="widest" color="whiteAlpha.900">
                   What you’ll hear
                 </Text>
                 <Heading size="md">Coaching in your earbuds</Heading>
@@ -328,12 +330,12 @@ const AskHankLanding = () => {
               p={6}
               borderRadius="xl"
               borderWidth={1}
-              borderColor="neutral.200"
+              borderColor="borderSubtle"
               boxShadow="lg"
             >
               <Icon as={item.icon} boxSize={8} color="brand.600" />
               <Heading size="md">{item.title}</Heading>
-              <Text color="neutral.600">{item.copy}</Text>
+              <Text color="textMuted">{item.copy}</Text>
             </VStack>
           ))}
         </SimpleGrid>
@@ -342,7 +344,7 @@ const AskHankLanding = () => {
           mt={{ base: 12, md: 16 }}
           borderRadius="2xl"
           borderWidth={1}
-          borderColor="neutral.200"
+          borderColor="borderSubtle"
           bgGradient="linear(to-r, white, neutral.100)"
           boxShadow="xl"
           p={{ base: 6, md: 8 }}
@@ -351,15 +353,15 @@ const AskHankLanding = () => {
             <HStack spacing={4} align="flex-start" flex={1}>
               <Icon as={FiBookOpen} boxSize={10} color="brand.600" />
               <Box>
-                <Heading size="lg" mb={2}>
-                  Future-Proof Life Test
-                </Heading>
-                <Text color="neutral.700">
-                  Download the diagnostic Henry uses to uncover financial, relational, and leadership blind
-                  spots before they cost you momentum. Bring it into your next strategy session or family
-                  debrief.
-                </Text>
-              </Box>
+              <Heading size="lg" mb={2}>
+                Future-Proof Life Test
+              </Heading>
+              <Text color="textMuted">
+                Download the diagnostic Henry uses to uncover financial, relational, and leadership blind
+                spots before they cost you momentum. Bring it into your next strategy session or family
+                debrief.
+              </Text>
+            </Box>
             </HStack>
             <Button
               as={Link}
@@ -388,10 +390,10 @@ const AskHankLanding = () => {
               p={{ base: 6, md: 8 }}
               borderRadius="2xl"
               borderWidth={1}
-              borderColor="neutral.200"
+              borderColor="borderSubtle"
               boxShadow="lg"
               spacing={5}
-              divider={<Divider borderColor="neutral.200" />}
+              divider={<Divider borderColor="borderSubtle" />}
             >
               <Heading size="lg" color="brand.700">
                 Conversations Hank leads
@@ -399,7 +401,7 @@ const AskHankLanding = () => {
               {focusAreas.map((item) => (
                 <HStack key={item} align="start" spacing={3}>
                   <Icon as={CheckCircleIcon} color="accent.500" mt={1} />
-                  <Text color="neutral.700">{item}</Text>
+                  <Text color="textMuted">{item}</Text>
                 </HStack>
               ))}
             </VStack>
@@ -412,7 +414,7 @@ const AskHankLanding = () => {
               p={{ base: 6, md: 8 }}
               borderRadius="2xl"
               borderWidth={1}
-              borderColor="brand.100"
+              borderColor="borderSubtle"
               boxShadow="md"
               spacing={6}
             >
@@ -434,7 +436,7 @@ const AskHankLanding = () => {
                       <Icon as={step.icon} color="brand.600" />
                       <Heading size="sm">{step.title}</Heading>
                     </HStack>
-                    <Text color="neutral.700" mt={2}>
+                    <Text color="textMuted" mt={2}>
                       {step.detail}
                     </Text>
                   </Box>
@@ -449,14 +451,14 @@ const AskHankLanding = () => {
           bg={cardBg}
           borderRadius="3xl"
           borderWidth={1}
-          borderColor="neutral.200"
+          borderColor="borderSubtle"
           boxShadow="xl"
           p={{ base: 8, md: 12 }}
         >
           <Stack spacing={{ base: 10, md: 16 }} direction={{ base: "column", md: "row" }} align="center">
             <VStack flex={1} align="start" spacing={4}>
               <Heading size="lg">Private Q&amp;A Answers</Heading>
-              <Text color="neutral.700">
+              <Text color="textMuted">
                 {`Every ${BRAND_TITLE} exchange blends financial strategy with human insight. Whether you
                 need a script for a delicate conversation or a blueprint for long-term resilience,
                 you get clarity rooted in experience.`}
@@ -465,14 +467,14 @@ const AskHankLanding = () => {
             <Divider
               orientation="vertical"
               height="140px"
-              borderColor="neutral.300"
+              borderColor="borderSubtle"
               borderWidth={1}
               mx={{ base: 0, md: 4 }}
               display={{ base: "none", md: "block" }}
             />
             <VStack flex={1} align="start" spacing={4}>
               <Heading size="lg">Ready when decisions cannot wait.</Heading>
-              <Text color="neutral.700">
+              <Text color="textMuted">
                 Submit your question today and receive tailored guidance within one business day—
                 without ever stepping into a boardroom.
               </Text>
@@ -490,10 +492,10 @@ const AskHankLanding = () => {
               bg={cardBg}
               borderRadius="xl"
               borderWidth={1}
-              borderColor="neutral.200"
+              borderColor="borderSubtle"
             >
               <Heading size="md">{item.question}</Heading>
-              <Text color="neutral.700">{item.answer}</Text>
+              <Text color="textMuted">{item.answer}</Text>
             </VStack>
           ))}
         </SimpleGrid>

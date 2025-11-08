@@ -53,6 +53,19 @@ const theme = extendTheme({
     accent: accentColors,
     neutral: neutrals,
   },
+  semanticTokens: {
+    colors: {
+      surface: { default: "white", _dark: "neutral.900" },
+      surfaceMuted: { default: "neutral.50", _dark: "neutral.900" },
+      surfaceElevated: { default: "white", _dark: "neutral.800" },
+      surfaceSubtle: { default: "neutral.100", _dark: "neutral.800" },
+      textPrimary: { default: "neutral.900", _dark: "neutral.50" },
+      textMuted: { default: "neutral.700", _dark: "neutral.300" },
+      borderSubtle: { default: "neutral.200", _dark: "neutral.700" },
+      action: { default: "accent.500", _dark: "accent.300" },
+      onAction: { default: "white", _dark: "brand.900" },
+    },
+  },
   styles: {
     global: {
       "::selection": {
@@ -60,8 +73,8 @@ const theme = extendTheme({
         color: "brand.900",
       },
       body: {
-        bg: "neutral.50",
-        color: "neutral.800",
+        bg: "surfaceMuted",
+        color: "textPrimary",
       },
     },
   },

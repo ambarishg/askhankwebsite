@@ -5,7 +5,7 @@ import SiteFooter from "./components/SiteFooter.jsx";
 
 const App = () => {
   return (
-    <Box bg="neutral.50" minH="100vh">
+    <Box bg="surfaceMuted" color="textPrimary" minH="100vh">
       <TopNav />
       <AskHankLanding />
       <SiteFooter />
