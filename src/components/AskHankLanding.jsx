@@ -121,13 +121,13 @@ const AskHankLanding = () => {
                 Ask Hank before the money conversations get messy.
               </Heading>
               <Text fontSize={{ base: "lg", md: "xl" }} lineHeight="taller">
-                AskHank.ca gives you discreet access to Henry Svec’s decades of advisory wisdom so
+                AskHank.ai gives you discreet access to Henry Svec’s decades of advisory wisdom so
                 you can navigate money, relationships, and legacy moves with confidence.
               </Text>
               <HStack spacing={4} wrap="wrap">
                 <Button
                   as={Link}
-                  href="https://askhank.ca"
+                  href="https://askhank.ai"
                   isExternal
                   size="lg"
                   colorScheme="accent"
@@ -149,7 +149,7 @@ const AskHankLanding = () => {
                 <Box position="absolute" inset={0} bgGradient="linear(to-br, blackAlpha.700, transparent)" />
                 <VStack position="absolute" bottom={6} left={6} align="start" spacing={1} color="white">
                   <Text fontSize="xs" letterSpacing="widest">
-                    AskHank.ca Private Q&amp;A
+                    AskHank.ai Private Q&amp;A
                   </Text>
                   <Heading size="md">One trusted voice when money meets emotion.</Heading>
                 </VStack>
@@ -256,16 +256,23 @@ const AskHankLanding = () => {
           boxShadow="xl"
           p={{ base: 8, md: 12 }}
         >
-          <Stack spacing={{ base: 8, md: 0 }} direction={{ base: "column", md: "row" }} align="center">
+          <Stack spacing={{ base: 10, md: 16 }} direction={{ base: "column", md: "row" }} align="center">
             <VStack flex={1} align="start" spacing={4}>
-              <Heading size="lg">Private Q&amp;A. Honest answers.</Heading>
+              <Heading size="lg">Private Q&amp;A Answers</Heading>
               <Text color="neutral.700">
                 Every Ask Hank exchange blends financial strategy with human insight. Whether you
                 need a script for a delicate conversation or a blueprint for long-term resilience,
                 you get clarity rooted in experience.
               </Text>
             </VStack>
-            <Divider orientation="vertical" height="120px" display={{ base: "none", md: "block" }} />
+            <Divider
+              orientation="vertical"
+              height="140px"
+              borderColor="neutral.300"
+              borderWidth={1}
+              mx={{ base: 0, md: 4 }}
+              display={{ base: "none", md: "block" }}
+            />
             <VStack flex={1} align="start" spacing={4}>
               <Heading size="lg">Ready when decisions cannot wait.</Heading>
               <Text color="neutral.700">
@@ -313,7 +320,7 @@ const AskHankLanding = () => {
           <HStack justify="center" spacing={4} wrap="wrap">
             <Button
               as={Link}
-              href="https://askhank.ca"
+              href="https://askhank.ai"
               isExternal
               size="lg"
               colorScheme="whiteAlpha"
@@ -331,3 +338,5 @@ const AskHankLanding = () => {
 };
 
 export default AskHankLanding;
+
+

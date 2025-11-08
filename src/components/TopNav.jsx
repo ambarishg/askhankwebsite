@@ -39,7 +39,7 @@ const TopNav = () => {
               </Box>
               <Box>
                 <Text fontSize="lg" fontWeight="bold" color="brand.700">
-                  AskHank.ca
+                  AskHank.ai
                 </Text>
                 <Text fontSize="sm" color="neutral.500">
                   Confidential Money Coaching

@@ -7,7 +7,7 @@ const SiteFooter = () => {
         <Stack direction={{ base: "column", md: "row" }} spacing={8} justify="space-between">
           <Box>
             <Text fontSize="xl" fontWeight="bold">
-              AskHank.ca
+              AskHank.ai
             </Text>
             <Text mt={2} color="whiteAlpha.800">
               Discreet coaching for real-money conversations.
@@ -18,11 +18,8 @@ const SiteFooter = () => {
             <Text textTransform="uppercase" letterSpacing="wider" fontSize="sm" color="whiteAlpha.700">
               Find us
             </Text>
-            <Link href="mailto:hello@askhank.ca" color="accent.200">
-              hello@askhank.ca
-            </Link>
-            <Link href="tel:+15197463223" color="accent.200">
-              +1 (519) 746-3223
+            <Link href="mailto:hello@askhank.ai" color="accent.200">
+              hello@askhank.ai
             </Link>
           </Flex>
 
