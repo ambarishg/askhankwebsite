@@ -1,4 +1,5 @@
 import { Box, Container, Flex, HStack, Link, Text, useColorModeValue } from "@chakra-ui/react";
+import { BRAND_TITLE } from "../constants/branding.js";
 
 const TopNav = () => {
   const bg = useColorModeValue("white", "neutral.900");
@@ -39,7 +40,7 @@ const TopNav = () => {
               </Box>
               <Box>
                 <Text fontSize="lg" fontWeight="bold" color="brand.700">
-                  AskHank.ai
+                  {BRAND_TITLE}
                 </Text>
                 <Text fontSize="sm" color="neutral.500">
                   Confidential Money Coaching

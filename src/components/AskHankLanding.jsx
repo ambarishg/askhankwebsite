@@ -27,6 +27,7 @@ import {
   FiTrendingUp,
   FiUsers,
 } from "react-icons/fi";
+import { BRAND_TITLE } from "../constants/branding.js";
 
 const differentiators = [
   {
@@ -86,7 +87,7 @@ const steps = [
 
 const faq = [
   {
-    question: "Who is Ask Hank for?",
+    question: `Who is ${BRAND_TITLE} for?`,
     answer:
       "Couples, founders, and families who want a trusted sounding board for sensitive financial decisions or money relationship hurdles.",
   },
@@ -131,11 +132,11 @@ const AskHankLanding = () => {
                 Money coach + relationship strategist
               </Tag>
               <Heading as="h1" size={{ base: "2xl", md: "3xl" }} lineHeight="shorter">
-                Ask Hank before the money conversations get messy.
+                {BRAND_TITLE}
               </Heading>
               <Text fontSize={{ base: "lg", md: "xl" }} lineHeight="taller">
-                AskHank.ai gives you discreet access to Henry Svec’s decades of advisory wisdom so
-                you can navigate money, relationships, and legacy moves with confidence.
+                {`${BRAND_TITLE}—powered by AskHank.ai—gives you discreet access to Henry Svec’s decades of advisory wisdom so
+                you can navigate money, relationships, and legacy moves with confidence.`}
               </Text>
               <HStack spacing={4} wrap="wrap">
                 <Button
@@ -162,7 +163,7 @@ const AskHankLanding = () => {
                 <Box position="absolute" inset={0} bgGradient="linear(to-br, blackAlpha.700, transparent)" />
                 <VStack position="absolute" bottom={6} left={6} align="start" spacing={1} color="white">
                   <Text fontSize="xs" letterSpacing="widest">
-                    AskHank.ai Private Q&amp;A
+                    {`${BRAND_TITLE} Private Q&A`}
                   </Text>
                   <Heading size="md">One trusted voice when money meets emotion.</Heading>
                 </VStack>
@@ -341,7 +342,7 @@ const AskHankLanding = () => {
               spacing={6}
             >
               <Heading size="lg" color="brand.800">
-                How Ask Hank works
+                {`How ${BRAND_TITLE} works`}
               </Heading>
               {steps.map((step, index) => (
                 <Stack
@@ -381,9 +382,9 @@ const AskHankLanding = () => {
             <VStack flex={1} align="start" spacing={4}>
               <Heading size="lg">Private Q&amp;A Answers</Heading>
               <Text color="neutral.700">
-                Every Ask Hank exchange blends financial strategy with human insight. Whether you
+                {`Every ${BRAND_TITLE} exchange blends financial strategy with human insight. Whether you
                 need a script for a delicate conversation or a blueprint for long-term resilience,
-                you get clarity rooted in experience.
+                you get clarity rooted in experience.`}
               </Text>
             </VStack>
             <Divider
@@ -435,8 +436,8 @@ const AskHankLanding = () => {
             Money confidence starts with one honest conversation.
           </Heading>
           <Text fontSize="lg" maxW="3xl" mx="auto" mb={8}>
-            Ask Hank to decode the financial, emotional, and relational layers of your next big
-            decision—and move forward knowing an expert has your back.
+            {`${BRAND_TITLE} decodes the financial, emotional, and relational layers of your next big
+            decision—and helps you move forward knowing an expert has your back.`}
           </Text>
           <HStack justify="center" spacing={4} wrap="wrap">
             <Button
@@ -461,7 +462,7 @@ const AskHankLanding = () => {
               color="white"
               _hover={{ bg: "whiteAlpha.200" }}
             >
-              Subscribe to the Ask Hank Newsletter
+              {`Subscribe to the ${BRAND_TITLE} Newsletter`}
             </Button>
           </HStack>
         </Box>

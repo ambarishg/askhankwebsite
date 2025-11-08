@@ -1,4 +1,5 @@
 import { Box, Container, Flex, HStack, Link, Stack, Text } from "@chakra-ui/react";
+import { BRAND_TITLE } from "../constants/branding.js";
 
 const SiteFooter = () => {
   return (
@@ -7,7 +8,7 @@ const SiteFooter = () => {
         <Stack direction={{ base: "column", md: "row" }} spacing={8} justify="space-between">
           <Box>
             <Text fontSize="xl" fontWeight="bold">
-              AskHank.ai
+              {BRAND_TITLE}
             </Text>
             <Text mt={2} color="whiteAlpha.800">
               Discreet coaching for real-money conversations.
@@ -48,7 +49,7 @@ const SiteFooter = () => {
           flexWrap="wrap"
         >
           <Text fontSize="sm" color="whiteAlpha.600">
-            (c) {new Date().getFullYear()} Ask Hank. All rights reserved.
+            (c) {new Date().getFullYear()} {BRAND_TITLE}. All rights reserved.
           </Text>
           <Text fontSize="sm" color="whiteAlpha.600">
             Built by Misron 
