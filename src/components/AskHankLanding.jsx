@@ -19,6 +19,8 @@ import { CheckCircleIcon } from "@chakra-ui/icons";
 import {
   FiClock,
   FiCompass,
+  FiDownload,
+  FiBookOpen,
   FiHeadphones,
   FiLock,
   FiMessageCircle,
@@ -51,6 +53,11 @@ const podcastHighlights = [
   "Short, high-signal episodes distilled from real coaching sessions.",
   "Actionable scripts and reframes you can bring into your next money talk.",
 ];
+
+const futureProofLifeTest = new URL(
+  "../../books/Future_Proof_Life_Test_With_Author-1.pdf",
+  import.meta.url
+);
 
 const focusAreas = [
   "Navigating difficult money conversations with partners or family",
@@ -257,6 +264,43 @@ const AskHankLanding = () => {
           ))}
         </SimpleGrid>
 
+        <Box
+          mt={{ base: 12, md: 16 }}
+          borderRadius="2xl"
+          borderWidth={1}
+          borderColor="neutral.200"
+          bg={cardBg}
+          boxShadow="lg"
+          p={{ base: 6, md: 8 }}
+        >
+          <Stack direction={{ base: "column", md: "row" }} spacing={{ base: 6, md: 10 }} align="center">
+            <HStack spacing={4} align="flex-start" flex={1}>
+              <Icon as={FiBookOpen} boxSize={10} color="brand.600" />
+              <Box>
+                <Heading size="lg" mb={2}>
+                  Future-Proof Life Test
+                </Heading>
+                <Text color="neutral.700">
+                  Download the diagnostic Henry uses to uncover financial, relational, and leadership blind
+                  spots before they cost you momentum. Bring it into your next strategy session or family
+                  debrief.
+                </Text>
+              </Box>
+            </HStack>
+            <Button
+              as={Link}
+              href={futureProofLifeTest}
+              download
+              rightIcon={<Icon as={FiDownload} />}
+              size="lg"
+              colorScheme="accent"
+              variant="solid"
+            >
+              Get the PDF
+            </Button>
+          </Stack>
+        </Box>
+
         <Box id="conversations" mt={{ base: 14, md: 20 }}>
           <Stack
             direction={{ base: "column", lg: "row" }}
@@ -406,6 +450,18 @@ const AskHankLanding = () => {
               _hover={{ bg: "neutral.100" }}
             >
               Start a question
+            </Button>
+            <Button
+              as={Link}
+              href="https://www.askhankyourmoneycoach.ca/subscribe"
+              isExternal
+              size="lg"
+              variant="outline"
+              borderColor="whiteAlpha.700"
+              color="white"
+              _hover={{ bg: "whiteAlpha.200" }}
+            >
+              Subscribe to the Ask Hank Newsletter
             </Button>
           </HStack>
         </Box>
