@@ -27,6 +27,7 @@ import {
   FiTrendingUp,
   FiUsers,
 } from "react-icons/fi";
+import { FaQuoteLeft } from "react-icons/fa";
 import { BRAND_TITLE } from "../constants/branding.js";
 
 const differentiators = [
@@ -55,16 +56,29 @@ const podcastHighlights = [
   "Actionable scripts and reframes you can bring into your next money talk.",
 ];
 
+const trustStats = [
+  { value: "30+", label: "Years advising complex families" },
+  { value: "4,000+", label: "Confidential money dialogues resolved" },
+  { value: "$2B+", label: "Client capital stewarded with care" },
+];
+
+const leadershipQuote = {
+  quote:
+    "Henry blends board-level clarity with the discretion of a family advisor. We leave every session with decisions we can defend.",
+  author: "S. Walker",
+  role: "Family Office Principal",
+};
+
 const futureProofLifeTest = new URL(
   "../../books/Future_Proof_Life_Test_With_Author-1.pdf",
   import.meta.url
 );
 
 const focusAreas = [
-  "Navigating difficult money conversations with partners or family",
-  "Building resilient wealth strategies for volatile markets",
-  "Clarifying debt, investment, and retirement decisions with expert insight",
-  "Setting boundaries between business, legacy, and relationships",
+  "Realign partners or family members before high-stakes wealth moves stall out.",
+  "Translate market, liquidity, and succession risk into plain language your board trusts.",
+  "Structure debt, investment, and retirement trade-offs so execution stays on schedule.",
+  "Protect boundaries between business, legacy, and relationships while scaling.",
 ];
 
 const steps = [
@@ -111,9 +125,33 @@ const AskHankLanding = () => {
   const subtleBg = useColorModeValue("neutral.100", "neutral.700");
 
   return (
-    <Box as="main">
-      <Box bgGradient="linear(to-r, brand.800, brand.600)" color="white" py={{ base: 16, md: 24 }}>
-        <Container maxW="container.xl">
+    <Box as="main" position="relative">
+      <Box
+        bgGradient="linear(to-r, brand.900, brand.600)"
+        color="white"
+        py={{ base: 16, md: 24 }}
+        position="relative"
+        overflow="hidden"
+      >
+        <Box
+          position="absolute"
+          top="-30%"
+          right="-10%"
+          w={{ base: "80%", md: "50%" }}
+          h="160%"
+          bgGradient="radial(at top, whiteAlpha.400, transparent 60%)"
+          opacity={0.5}
+        />
+        <Box
+          position="absolute"
+          bottom="-20%"
+          left="-10%"
+          w={{ base: "70%", md: "40%" }}
+          h="120%"
+          bgGradient="radial(at bottom, whiteAlpha.300, transparent 60%)"
+          opacity={0.4}
+        />
+        <Container maxW="container.xl" position="relative">
           <Stack
             direction={{ base: "column", lg: "row" }}
             spacing={{ base: 12, lg: 16 }}
@@ -144,15 +182,18 @@ const AskHankLanding = () => {
                   href="https://askhank.ai"
                   isExternal
                   size="lg"
-                  colorScheme="accent"
+                  colorScheme="whiteAlpha"
+                  color="brand.900"
+                  bg="white"
                   fontWeight="bold"
+                  _hover={{ bg: "neutral.100", transform: "translateY(-2px)" }}
                 >
                   Enter the Q&amp;A portal
                 </Button>
               </HStack>
             </VStack>
             <Box flex={1} maxW="520px" w="100%">
-              <Box position="relative" borderRadius="3xl" overflow="hidden" boxShadow="2xl">
+              <Box position="relative" borderRadius="3xl" overflow="hidden" boxShadow="2xl" bg="blackAlpha.700">
                 <Image
                   src={heroImage}
                   alt="Advisor collaborating with clients"
@@ -170,6 +211,8 @@ const AskHankLanding = () => {
               </Box>
             </Box>
           </Stack>
+
+  
         </Container>
       </Box>
 
@@ -251,12 +294,12 @@ const AskHankLanding = () => {
               key={item.title}
               align="start"
               spacing={4}
-              bg={cardBg}
+              bgGradient="linear(to-br, white, neutral.100)"
               p={6}
               borderRadius="xl"
               borderWidth={1}
               borderColor="neutral.200"
-              boxShadow="md"
+              boxShadow="lg"
             >
               <Icon as={item.icon} boxSize={8} color="brand.600" />
               <Heading size="md">{item.title}</Heading>
@@ -270,8 +313,8 @@ const AskHankLanding = () => {
           borderRadius="2xl"
           borderWidth={1}
           borderColor="neutral.200"
-          bg={cardBg}
-          boxShadow="lg"
+          bgGradient="linear(to-r, white, neutral.100)"
+          boxShadow="xl"
           p={{ base: 6, md: 8 }}
         >
           <Stack direction={{ base: "column", md: "row" }} spacing={{ base: 6, md: 10 }} align="center">
@@ -318,6 +361,7 @@ const AskHankLanding = () => {
               borderColor="neutral.200"
               boxShadow="lg"
               spacing={5}
+              divider={<Divider borderColor="neutral.200" />}
             >
               <Heading size="lg" color="brand.700">
                 Conversations Hank leads
@@ -339,6 +383,7 @@ const AskHankLanding = () => {
               borderRadius="2xl"
               borderWidth={1}
               borderColor="brand.100"
+              boxShadow="md"
               spacing={6}
             >
               <Heading size="lg" color="brand.800">
@@ -472,5 +517,3 @@ const AskHankLanding = () => {
 };
 
 export default AskHankLanding;
-
-
