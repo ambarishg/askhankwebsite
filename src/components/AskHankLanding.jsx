@@ -33,7 +33,7 @@ import { BRAND_TITLE } from "../constants/branding.js";
 const differentiators = [
   {
     title: "Confidential by design",
-    copy: "Private Q&A with Henry Svec keeps vulnerable money conversations safe, judgment-free, and off the record.",
+    copy: "Private Q&A with Hank Svec keeps vulnerable money conversations safe, judgment-free, and off the record.",
     icon: FiLock,
   },
   {
@@ -84,7 +84,7 @@ const focusAreas = [
 const steps = [
   {
     title: "Share the scenario",
-    detail: "Send a confidential brief about the decision, tension, or transition on your mind.",
+    detail: "Ask a question about the decision, tension, or transition on your mind.",
     icon: FiMessageCircle,
   },
   {
@@ -108,12 +108,15 @@ const faq = [
   {
     question: "Is everything actually confidential?",
     answer:
-      "Yes. Every conversation stays between you and Henry Svec. We never record, sell, or reuse your story.",
+      "Yes. Every conversation stays between you and Hank Svec. We never record, sell, or reuse your story.",
   },
   {
     question: "Do I need financial statements ready?",
     answer:
-      "No formal prep is required. Bring the context, the concern, and the outcomes you hope to reach—Hank guides the rest.",
+      "Yes. If you are serious enough to consider investing in a company you need to download the financial \
+statements for the past 3 years into Ask Hank. This ensures your analysis is based on accurate data, not \
+AI induced fantasy or crowd sourced information. The reports are available for free from the Company \
+Investors Relations site or Sedar+ or Edgar in the United States.",
   },
 ];
 
@@ -173,7 +176,7 @@ const AskHankLanding = () => {
                 {BRAND_TITLE}
               </Heading>
               <Text fontSize={{ base: "lg", md: "xl" }} lineHeight="taller">
-                {`${BRAND_TITLE}—powered by AskHank.ai—gives you discreet access to Henry Svec’s decades of advisory wisdom so
+                {`${BRAND_TITLE}—powered by AskHank.ai—gives you answers to your question to Hank Svec’s decades of advisory wisdom so
                 you can navigate money, relationships, and legacy moves with confidence.`}
               </Text>
               <HStack spacing={4} wrap="wrap">
@@ -226,7 +229,7 @@ const AskHankLanding = () => {
               {`Subscribe to the ${BRAND_TITLE} Newsletter`}
             </Heading>
             <Text fontSize={{ base: "md", md: "lg" }} maxW="3xl" mx="auto" mb={{ base: 6, md: 8 }}>
-              Weekly prompts from Henry Svec on navigating the emotional and financial layers of
+              Weekly prompts from Hank Svec on navigating the emotional and financial layers of
               complex money conversations, sent straight to your inbox.
             </Text>
             <Button
@@ -275,7 +278,7 @@ const AskHankLanding = () => {
               Tune into the Ask Your Money Coach podcast.
             </Heading>
             <Text fontSize="lg" color="whiteAlpha.900">
-              Join Henry Svec each week for candid breakdowns of the financial and relational knots
+              Join Hank Svec each week for candid breakdowns of the financial and relational knots
               listeners submit before stepping into their own conversations.
             </Text>
             <Button
@@ -475,8 +478,8 @@ const AskHankLanding = () => {
             <VStack flex={1} align="start" spacing={4}>
               <Heading size="lg">Ready when decisions cannot wait.</Heading>
               <Text color="textMuted">
-                Submit your question today and receive tailored guidance within one business day—
-                without ever stepping into a boardroom.
+                Ask a question get an answer right away when you need it. Ask Hank is in your
+                pocket at all times.
               </Text>
             </VStack>
           </Stack>

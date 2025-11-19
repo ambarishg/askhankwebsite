@@ -11,7 +11,7 @@ const SiteFooter = () => {
               {BRAND_TITLE}
             </Text>
             <Text mt={2} color="whiteAlpha.800">
-              Private advisory for complex wealth conversations.
+              Answers to your Money and Relationship Questions
             </Text>
           </Box>
 

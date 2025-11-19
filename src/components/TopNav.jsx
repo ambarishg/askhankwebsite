@@ -39,7 +39,7 @@ const TopNav = () => {
                   {BRAND_TITLE}
                 </Text>
                 <Text fontSize="sm" color="textMuted">
-                  Private advisory for high-stakes money decisions
+                 Answers to your Money and Relationship Questions
                 </Text>
               </Box>
             </HStack>
