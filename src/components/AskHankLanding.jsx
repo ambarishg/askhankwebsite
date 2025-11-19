@@ -176,7 +176,7 @@ const AskHankLanding = () => {
                 {BRAND_TITLE}
               </Heading>
               <Text fontSize={{ base: "lg", md: "xl" }} lineHeight="taller">
-                {`${BRAND_TITLE}—powered by AskHank.ai—gives you answers to your question to Hank Svec’s decades of advisory wisdom so
+                {`${BRAND_TITLE}—powered by AskHank.ai—gives you answers to your question to Hank Svec’s decades of wisdom so
                 you can navigate money, relationships, and legacy moves with confidence.`}
               </Text>
               <HStack spacing={4} wrap="wrap">
@@ -199,7 +199,7 @@ const AskHankLanding = () => {
               <Box position="relative" borderRadius="3xl" overflow="hidden" boxShadow="2xl" bg="blackAlpha.700">
                 <Image
                   src={heroImage}
-                  alt="Advisor collaborating with clients"
+                  alt="Collaborating with clients"
                   objectFit="cover"
                   w="100%"
                   h={{ base: "280px", lg: "400px" }}
